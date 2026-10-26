@@ -8,11 +8,9 @@ The **Private Markets Decision Benchmark (PMDB)** is a community-driven benchmar
 
 > **Operational decision-making in private markets.**
 
-Most AI benchmarks measure coding ability, mathematical reasoning, knowledge retrieval, or content generation.
+As of Q4 2026, most AI benchmarks measure coding ability, mathematical reasoning, knowledge retrieval, or content generation.
 
-Private markets professionals face a different challenge.
-
-Every day, investment operations, private credit, fund administration, real estate, securities finance, and middle office teams must determine:
+However Private Markets professionals face somewhat different challenges. Every day, investment operations, private credit, fund administration, real estate, securities finance, and middle office teams must determine:
 
 - What should happen next?
 - Which team should own the issue?
@@ -43,7 +41,8 @@ Examples:
 
 Unlike traditional benchmarks, the objective is not to generate an explanation or conduct open-ended reasoning.
 
-The objective is simple:
+---
+The core objective is:
 
 > **Select the correct operational decision.**
 
@@ -93,7 +92,7 @@ A good benchmark case should:
 
 ✅ Have a single intended next action
 
-✅ Include irrelevant but realistic information
+✅ Include irrelevant but realistic information (red herrings)
 
 ✅ Require interpretation of workflow state
 
@@ -107,22 +106,23 @@ A good benchmark case should:
 
 Examples of actions included within PMDB may include:
 
-- `covenant_test`
-- `borrower_follow_up`
-- `credit_review`
-- `counsel_review`
-- `collateral_review`
-- `cash_flow_analysis`
-- `portfolio_manager_review`
-- `reporting_exception`
-- `operations_exception`
-- `risk_committee_review`
-- `watchlist_consideration`
-- `waiver_evaluation`
-- `default_assessment`
-- `second_level_review`
-- `data_quality_investigation`
-- `no_action`
+| Workflow | Description |
+|----------|-------------|
+| covenant_test | Evaluates borrower compliance with loan covenants and identifies any breaches or exceptions. |
+| borrower_follow_up | Requests additional information, clarification, or remediation actions from the borrower. |
+| credit_review | Assesses the borrower's credit profile, financial condition, and overall creditworthiness. |
+| counsel_review | Obtains legal review of loan documentation, contractual obligations, or legal risks. |
+| collateral_review | Reviews the adequacy, valuation, and eligibility of pledged collateral. |
+| cash_flow_analysis | Analyzes historical and projected cash flows to assess repayment capacity. |
+| portfolio_manager_review | Seeks portfolio manager input on exposure, strategy alignment, and investment implications. |
+| reporting_exception | Investigates missing, delayed, incomplete, or inconsistent reporting submissions. |
+| operations_exception | Resolves operational issues, processing errors, or workflow execution failures. |
+| risk_committee_review | Escalates material risks or exceptions to the risk committee for evaluation and decision. |
+| watchlist_consideration | Determines whether the borrower should be placed on a watchlist due to emerging concerns. |
+| waiver_evaluation | Assesses requests to waive covenant breaches, policy exceptions, or documentation requirements. |
+| default_assessment | Evaluates whether conditions constitute an event of default and identifies potential actions. |
+| second_level_review | Performs an independent secondary review for quality assurance or escalation purposes. |
+| data_quality_investigation | Investigates data anomalies, inconsistencies, completeness issues, or accuracy concerns. |
 
 New actions may be introduced as benchmark coverage expands.
 
@@ -131,6 +131,21 @@ New actions may be introduced as benchmark coverage expands.
 ## Covered Domains
 
 Current and planned benchmark scenarios include:
+
+### Private Equity
+
+- Capital calls
+- Distribution notices
+- LP onboarding
+- Subscription document review
+- Side letter obligations
+- Deal closing workflows
+- Valuation governance
+- Portfolio company reporting
+- Investment committee exceptions
+- Co-investment administration
+- Fund liquidity events
+- Investor communications
 
 ### Private Credit
 
@@ -197,7 +212,7 @@ Current and planned benchmark scenarios include:
 
 ## Benchmark Structure
 
-Each benchmark case contains:
+Each benchmark case is expressed in JSON format:
 
 ```json
 {
@@ -212,6 +227,7 @@ Each benchmark case contains:
   }
 }
 ```
+P.S: I'll be providing a user-friendly UI, to accomodate folks unfamiliar with JSON file formats.
 
 ### Components
 
@@ -311,8 +327,8 @@ This project is intended to be community-driven.
 
 Contributions are encouraged from:
 
-- Private Credit professionals
 - Private Equity professionals
+- Private Credit professionals
 - Real Estate investors
 - Fund Administrators
 - Asset Servicers
@@ -323,9 +339,9 @@ Contributions are encouraged from:
 - AI researchers
 - Academic institutions
 
-The goal is not to promote a particular vendor or model.
+The goal is be totally AGNOSTIC to both vendor and model.
 
-The goal is to establish a transparent and repeatable way to measure AI decision quality in private markets workflows.
+Success means we are able to establish a transparent and repeatable way to measure AI decision quality in private markets workflows.
 
 ---
 
@@ -380,7 +396,7 @@ The long-term goal is to help the private markets industry define:
 
 As AI becomes increasingly embedded in investment and operational workflows, the industry will need objective ways to measure decision quality.
 
-PMDB aims to become an open standard for evaluating AI systems operating in private markets environments.
+PMDB aims to become an *OPEN STANDARD* for evaluating AI systems operating in private markets environments.
 
 If private markets wants AI optimized for private markets workflows, now is the time to start defining the tests.
 
