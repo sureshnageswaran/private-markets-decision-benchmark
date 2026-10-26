@@ -1,0 +1,66 @@
+{
+  "version": "0.1",
+  "test_count": 10,
+  "tests": [
+    {
+      "id": "final-certificate-requires-covenant-test",
+      "domain": "direct-lending",
+      "path": "direct-lending/final-certificate-requires-covenant-test.json",
+      "expected_action": "covenant_test"
+    },
+    {
+      "id": "missing-worksheet-requires-borrower-follow-up",
+      "domain": "direct-lending",
+      "path": "direct-lending/missing-worksheet-requires-borrower-follow-up.json",
+      "expected_action": "borrower_follow_up"
+    },
+    {
+      "id": "verified-covenant-breach-requires-credit-review",
+      "domain": "direct-lending",
+      "path": "direct-lending/verified-covenant-breach-requires-credit-review.json",
+      "expected_action": "credit_review"
+    },
+    {
+      "id": "cash-netting-interpretation-question-to-counsel",
+      "domain": "direct-lending",
+      "path": "direct-lending/cash-netting-interpretation-question-to-counsel.json",
+      "expected_action": "counsel_review"
+    },
+    {
+      "id": "unitranche-ebitda-addback-interpretation-counsel-review",
+      "domain": "direct-lending",
+      "path": "direct-lending/unitranche-ebitda-addback-interpretation-counsel-review.json",
+      "expected_action": "counsel_review"
+    },
+    {
+      "id": "sponsor-equity-cure-submitted-no-action",
+      "domain": "direct-lending",
+      "path": "direct-lending/sponsor-equity-cure-submitted-no-action.json",
+      "expected_action": "no_action"
+    },
+    {
+      "id": "delayed-borrowing-base-certificate-requires-borrower-follow-up",
+      "domain": "abl",
+      "path": "abl/delayed-borrowing-base-certificate-requires-borrower-follow-up.json",
+      "expected_action": "borrower_follow_up"
+    },
+    {
+      "id": "cre-dscr-calculation-pending-covenant-test",
+      "domain": "cre",
+      "path": "cre/cre-dscr-calculation-pending-covenant-test.json",
+      "expected_action": "covenant_test"
+    },
+    {
+      "id": "major-tenant-bankruptcy-credit-review",
+      "domain": "cre",
+      "path": "cre/major-tenant-bankruptcy-credit-review.json",
+      "expected_action": "credit_review"
+    },
+    {
+      "id": "superseded-metric-covered-by-executed-waiver-no-action",
+      "domain": "governance",
+      "path": "governance/superseded-metric-covered-by-executed-waiver-no-action.json",
+      "expected_action": "no_action"
+    }
+  ]
+}

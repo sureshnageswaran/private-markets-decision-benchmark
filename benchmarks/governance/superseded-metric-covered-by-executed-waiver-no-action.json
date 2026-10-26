@@ -1,0 +1,37 @@
+{
+  "id": "superseded-metric-covered-by-executed-waiver-no-action",
+  "expected_action": "no_action",
+  "rationale": "The flagged ratio came from a superseded draft, while the final certificate is within covenant and an executed waiver covers the period; no open action remains.",
+  "state": {
+    "as_of": "2026-10-08T16:00:00-04:00",
+    "borrower": "Meridian Components, Inc.",
+    "facility": "Meridian Term Loan B",
+    "observed_fact": {
+      "description": "An automated feed surfaced a 6.1x leverage figure from a draft certificate. The final signed certificate reports 5.7x, and the executed waiver log shows a waiver of the leverage covenant for this test period.",
+      "source": "Document version register, signed final certificate, and executed waiver repository",
+      "status": "Draft value is superseded; final package and waiver independently verified"
+    },
+    "agreement_terms": {
+      "provision": "Maintenance leverage covenant; executed waiver applies to the quarter ended September 30, 2026.",
+      "maximum_total_net_leverage": "6.0x",
+      "final_reported_total_net_leverage": "5.7x",
+      "waiver_status": "Executed by required parties and effective for the stated test period",
+      "status": "Current agreement and waiver confirmed"
+    },
+    "workflow_context": {
+      "final_certificate_received": true,
+      "final_calculation_reperformed": true,
+      "draft_marked_superseded": true,
+      "waiver_verified": true,
+      "prior_issue_closed": true,
+      "outstanding_information_request": false
+    },
+    "policy": {
+      "covenant_test": "Use when the current, operative certificate still needs an agreement-defined calculation.",
+      "borrower_follow_up": "Use when current required information remains missing, unclear, inconsistent, or late.",
+      "counsel_review": "Use when the effect or validity of the waiver is legally uncertain.",
+      "credit_review": "Use for a verified breach, material deterioration, or policy-defined trigger not resolved by an effective waiver.",
+      "no_action": "Use when the flagged item is superseded or resolved, the operative facts are verified, and no follow-up remains."
+    }
+  }
+}

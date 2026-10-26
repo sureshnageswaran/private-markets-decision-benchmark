@@ -1,0 +1,51 @@
+{
+  "id": "major-tenant-bankruptcy-credit-review",
+  "expected_action": "credit_review",
+  "rationale": "A verified Chapter 11 filing by a tenant paying 37% of annual rent is material property cash-flow deterioration above the agreement's 25% major-tenant threshold. It is not a borrower default, no information is outstanding, and no covenant test is due, so the immediate step is escalation to credit.",
+  "state": {
+    "as_of": "2026-11-25T08:00:00-05:00",
+    "borrower": "Prairie Retail Holdings",
+    "facility": "CRE Mortgage Facility",
+    "observed_fact": {
+      "description": "Anchor tenant accounting for 37% of annual rent filed Chapter 11.",
+      "source": "Public court filing, confirmed by servicer report and borrower notice",
+      "status": "Confirmed"
+    },
+    "agreement_terms": {
+      "major_tenant_threshold": "25% of annual base rent",
+      "major_tenant_event": "Bankruptcy of a major tenant must be reported by the borrower within 5 business days",
+      "tenant_bankruptcy_event_of_default": "No; a tenant bankruptcy is not a borrower event of default",
+      "cash_management": "No cash sweep, lockbox, or reserve trigger is tied to tenant events",
+      "dscr_test": "Quarterly; current quarter test completed and passed at 1.38x",
+      "status": "Current executed agreement; no amendment or waiver located"
+    },
+    "workflow_context": {
+      "tenant_default_verified": true,
+      "borrower_notice_received": true,
+      "lease_and_rent_information_received": true,
+      "information_outstanding": false,
+      "legal_question_identified": false,
+      "credit_team_notified": false
+    },
+    "policy": {
+      "covenant_test": "Perform the documented DSCR or debt-yield calculation when quarterly operating statements have been received and the quarterly test has not been completed.",
+      "borrower_follow_up": "Request missing, late, incomplete, unverifiable, internally inconsistent, or otherwise deficient reporting needed to perform contractual monitoring.",
+      "counsel_review": "Refer questions involving contractual interpretation, amendment effectiveness, waiver validity, notice requirements, cure rights, enforceability, or lender remedies to counsel.",
+      "credit_review": "Escalate verified material property cash-flow deterioration, covenant breaches, or policy-defined risk triggers to the credit team.",
+      "operations_exception": "Log and monitor an operational exception when a servicing, booking, reconciliation, or workflow processing issue is identified.",
+      "reporting_exception": "Record a reporting deficiency when required information remains outstanding after a borrower request has gone unanswered.",
+      "relationship_manager_notification": "Notify coverage personnel when a formal borrower request has not produced a response or the matter requires relationship-level escalation.",
+      "portfolio_manager_review": "Route to portfolio management after the credit team has completed its assessment and portfolio-level monitoring action is required.",
+      "collateral_review": "Commission an updated appraisal or property inspection after the credit team determines that a revaluation is required.",
+      "reserve_analysis": "Evaluate cash sweep, lockbox, or leasing reserve requirements when an agreement-defined cash management trigger has occurred.",
+      "cash_flow_analysis": "Perform a forward property cash-flow and re-leasing assessment after the credit team has accepted an escalation and requested re-underwriting.",
+      "risk_committee_review": "Escalate matters requiring committee oversight after the credit team has verified material risk and recommended committee review.",
+      "watchlist_consideration": "Evaluate watchlist status after the credit team has reviewed and validated a policy-defined credit concern.",
+      "waiver_evaluation": "Consider whether a waiver or amendment should be reviewed after the borrower has requested relief or an exception.",
+      "default_assessment": "Assess whether a borrower event of default exists after the relevant facts have been established and any interpretation questions resolved.",
+      "second_level_review": "Obtain secondary review of a completed covenant or borrowing base calculation when required by policy and not yet performed.",
+      "data_quality_investigation": "Investigate when delivered information conflicts with system records or prior reporting in a way that suggests a data, feed, or system error.",
+      "no_action": "Use only when the operative facts are verified and no follow-up action is required under the agreement and policy."
+    }
+  }
+}

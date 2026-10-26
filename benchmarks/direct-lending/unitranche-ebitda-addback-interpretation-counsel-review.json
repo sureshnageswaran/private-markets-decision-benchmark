@@ -1,0 +1,51 @@
+{
+  "id": "unitranche-ebitda-addback-interpretation-counsel-review",
+  "expected_action": "counsel_review",
+  "rationale": "The leverage covenant passes or fails depending on whether projected procurement savings qualify as 'reasonably identifiable and factually supportable'. The documentation is complete and both calculations are done, so the open question is contractual interpretation, which goes to counsel before any breach, default, or credit conclusion.",
+  "state": {
+    "as_of": "2026-11-12T10:30:00-05:00",
+    "borrower": "Vector Packaging Holdings",
+    "facility": "Unitranche Facility",
+    "observed_fact": {
+      "description": "Borrower added $14M of projected procurement savings to EBITDA in its Q3 compliance certificate.",
+      "source": "Compliance package with supplier contracts and savings schedule",
+      "status": "Calculation completed but disputed"
+    },
+    "agreement_terms": {
+      "ebitda_addback_language": "Reasonably identifiable and factually supportable savings.",
+      "maximum_total_net_leverage": "6.0x",
+      "leverage_with_addback": "5.8x",
+      "leverage_without_addback": "6.4x",
+      "status": "Current executed agreement; no amendment or waiver located"
+    },
+    "workflow_context": {
+      "supporting_documentation_received": true,
+      "covenant_calculation_complete": true,
+      "second_level_review_complete": true,
+      "second_level_review_finding": "Covenant outcome depends solely on whether the projected savings qualify under the addback language",
+      "material_to_covenant_outcome": true,
+      "borrower_relief_requested": false,
+      "credit_team_notified": false
+    },
+    "policy": {
+      "covenant_test": "Perform the documented leverage calculation when required reporting has been received and the calculation has not been completed.",
+      "borrower_follow_up": "Request missing, late, incomplete, unverifiable, internally inconsistent, or otherwise deficient reporting needed to perform contractual monitoring.",
+      "counsel_review": "Refer questions involving contractual interpretation, amendment effectiveness, waiver validity, notice requirements, cure rights, enforceability, or lender remedies to counsel.",
+      "credit_review": "Escalate a verified leverage covenant breach, material credit deterioration, or policy-defined risk trigger to the credit team.",
+      "operations_exception": "Log and monitor an operational exception when a servicing, booking, reconciliation, or workflow processing issue is identified.",
+      "reporting_exception": "Record a reporting deficiency when required information remains outstanding after a borrower request has gone unanswered.",
+      "relationship_manager_notification": "Notify coverage personnel when a formal borrower request has not produced a response or the matter requires relationship-level escalation.",
+      "portfolio_manager_review": "Route to portfolio management after the credit team has completed its assessment and portfolio-level monitoring action is required.",
+      "collateral_review": "Perform collateral or enterprise value analysis after a covenant breach or material deterioration has been verified.",
+      "reserve_analysis": "Evaluate pricing step-ups, blocked baskets, or other agreement-defined adjustments after a covenant result has been finalized.",
+      "cash_flow_analysis": "Perform a forward cash-flow and liquidity assessment after the credit team has accepted an escalation and requested re-underwriting.",
+      "risk_committee_review": "Escalate matters requiring committee oversight after the credit team has verified material risk and recommended committee review.",
+      "watchlist_consideration": "Evaluate watchlist status after the credit team has reviewed and validated a policy-defined credit concern.",
+      "waiver_evaluation": "Consider whether a waiver or amendment should be reviewed after the borrower has requested relief or an exception.",
+      "default_assessment": "Assess whether a borrower event of default exists after the relevant facts have been established and any interpretation questions resolved.",
+      "second_level_review": "Obtain secondary review of a completed covenant or borrowing base calculation when required by policy and not yet performed.",
+      "data_quality_investigation": "Investigate when delivered information conflicts with system records or prior reporting in a way that suggests a data, feed, or system error.",
+      "no_action": "Use only when the covenant result is final, the operative facts are verified, and no follow-up action remains."
+    }
+  }
+}

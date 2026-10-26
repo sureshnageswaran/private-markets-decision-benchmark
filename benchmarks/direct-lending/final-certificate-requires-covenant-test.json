@@ -1,0 +1,38 @@
+{
+  "id": "final-certificate-requires-covenant-test",
+  "expected_action": "covenant_test",
+  "rationale": "A final certificate reports a metric subject to a maintenance covenant, and the analyst has not completed the documented calculation.",
+  "state": {
+    "as_of": "2026-10-01T10:00:00-04:00",
+    "borrower": "Meridian Components, Inc.",
+    "facility": "Meridian Term Loan B",
+    "observed_fact": {
+      "description": "Borrower delivered its final quarterly compliance certificate. It reports Total Net Leverage of 5.8x for the quarter ended September 30, 2026.",
+      "source": "Borrower-signed compliance certificate received through the agent bank portal",
+      "status": "Final; not yet independently recalculated"
+    },
+    "agreement_terms": {
+      "provision": "Maintenance leverage covenant",
+      "test_frequency": "Quarterly, as of quarter end",
+      "maximum_total_net_leverage": "6.0x",
+      "reported_calculation": "5.8x",
+      "reporting_deadline": "10 business days after quarter end",
+      "definitions": "Total Net Leverage and permitted cash netting are defined in the executed agreement. The full calculation worksheet is attached to the case file.",
+      "cure_right": "The executed agreement includes an equity cure right; no cure has been asserted.",
+      "status": "Current executed agreement; no later amendment or waiver located"
+    },
+    "workflow_context": {
+      "certificate_due": true,
+      "certificate_received": true,
+      "prior_open_issue": false,
+      "analyst_recalculation_complete": false
+    },
+    "policy": {
+      "covenant_test": "Run the documented covenant calculation when a final certificate reports a maintenance covenant metric.",
+      "borrower_follow_up": "Request missing, unclear, internally inconsistent, or late information needed to complete the test.",
+      "counsel_review": "Route questions about interpretation, enforceability, notice, waiver, default, or cure rights to counsel.",
+      "credit_review": "Escalate a verified breach, material deterioration, or a policy-defined risk trigger to credit.",
+      "no_action": "Use only when the fact does not require one of these actions under the supplied agreement and policy."
+    }
+  }
+}

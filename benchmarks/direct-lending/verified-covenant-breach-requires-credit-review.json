@@ -1,0 +1,38 @@
+{
+  "id": "verified-covenant-breach-requires-credit-review",
+  "expected_action": "credit_review",
+  "rationale": "The analyst completed the agreement-defined calculation, verified a ratio above the maximum, and no cure or waiver is recorded; policy requires escalation.",
+  "state": {
+    "as_of": "2026-10-06T14:00:00-04:00",
+    "borrower": "Meridian Components, Inc.",
+    "facility": "Meridian Term Loan B",
+    "observed_fact": {
+      "description": "The completed covenant calculation shows Total Net Leverage of 6.3x against a 6.0x maximum for the quarter ended September 30, 2026.",
+      "source": "Final borrower certificate and analyst reperformance using the executed agreement definitions",
+      "status": "Calculation independently checked; result verified; no cure notice or waiver recorded"
+    },
+    "agreement_terms": {
+      "provision": "Maintenance leverage covenant",
+      "test_frequency": "Quarterly, as of quarter end",
+      "maximum_total_net_leverage": "6.0x",
+      "reperformed_total_net_leverage": "6.3x",
+      "cure_right": "An equity cure right exists under the agreement, but no cure has been asserted or documented as of the decision time.",
+      "status": "Current executed agreement; no later amendment or waiver located"
+    },
+    "workflow_context": {
+      "certificate_due": true,
+      "certificate_received": true,
+      "analyst_recalculation_complete": true,
+      "second_review_complete": true,
+      "cure_notice_received": false,
+      "waiver_recorded": false
+    },
+    "policy": {
+      "covenant_test": "Use when the agreement-defined calculation has not yet been completed.",
+      "borrower_follow_up": "Request missing, unclear, internally inconsistent, or late information needed to complete the test.",
+      "counsel_review": "Route legal interpretation or questions about formal notice, default status, waiver, or cure rights to counsel. A legal conclusion is not made by this routing decision.",
+      "credit_review": "Escalate a verified breach or policy-defined risk trigger to the credit team promptly.",
+      "no_action": "Use only when no further step is warranted under the supplied agreement and policy."
+    }
+  }
+}

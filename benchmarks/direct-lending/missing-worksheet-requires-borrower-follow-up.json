@@ -1,0 +1,35 @@
+{
+  "id": "missing-worksheet-requires-borrower-follow-up",
+  "expected_action": "borrower_follow_up",
+  "rationale": "The certificate is due and received, but the calculation worksheet needed to test compliance is absent.",
+  "state": {
+    "as_of": "2026-10-02T11:30:00-04:00",
+    "borrower": "Meridian Components, Inc.",
+    "facility": "Meridian Term Loan B",
+    "observed_fact": {
+      "description": "The quarterly compliance certificate was received, but the EBITDA and net-debt schedules supporting the reported leverage ratio were not attached.",
+      "source": "Agent bank portal receipt log and document package",
+      "status": "Received package is incomplete; no supporting schedules in the portal"
+    },
+    "agreement_terms": {
+      "provision": "Quarterly compliance certificate and maintenance leverage covenant",
+      "reporting_deadline": "10 business days after quarter end",
+      "required_support": "Borrower must provide the certificate and supporting calculation detail required by the executed agreement.",
+      "status": "Current executed agreement; no later amendment or waiver located"
+    },
+    "workflow_context": {
+      "certificate_due": true,
+      "certificate_received": true,
+      "supporting_schedules_received": false,
+      "analyst_recalculation_complete": false,
+      "prior_request_outstanding": false
+    },
+    "policy": {
+      "covenant_test": "Run the documented covenant calculation when the required final certificate and supporting information are available.",
+      "borrower_follow_up": "Request missing, unclear, internally inconsistent, or late information needed to complete the test.",
+      "counsel_review": "Route questions about interpretation, enforceability, notice, waiver, default, or cure rights to counsel.",
+      "credit_review": "Escalate a verified breach, material deterioration, or a policy-defined risk trigger to credit.",
+      "no_action": "Use only when the fact does not require one of these actions under the supplied agreement and policy."
+    }
+  }
+}

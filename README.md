@@ -96,7 +96,7 @@ A good benchmark case should:
 
 ✅ Require interpretation of workflow state
 
-✅ Avoid label leakage
+✅ Avoid label leakage (where the title gives away the answer to the model)
 
 ✅ Be useful for comparing multiple AI systems
 
@@ -228,6 +228,37 @@ Each benchmark case is expressed in JSON format:
 }
 ```
 P.S: I'll be providing a user-friendly UI, to accomodate folks unfamiliar with JSON file formats.
+
+### Repository Layout
+
+Each case lives in its own file, grouped by domain under `benchmarks/`:
+
+```text
+benchmarks/
+├── direct-lending/   # covenant tests, borrower follow-up, credit review, counsel review, equity cures
+├── abl/              # borrowing base certificates
+├── cre/              # DSCR monitoring, major tenant events
+├── governance/       # waivers and superseded metrics
+└── manifest.json     # index of all cases
+scripts/
+└── bundle.py         # builds tests.json from benchmarks/
+```
+
+Files are named after the case `id` (e.g. `final-certificate-requires-covenant-test.json`).
+
+`benchmarks/manifest.json` lists every case with its `id`, `domain`, `path`, and `expected_action`, plus a `version` and `test_count`. Add each new case to the manifest.
+
+### Bundling into a Single File
+
+Some runners prefer one file. From the repository root:
+
+```bash
+python3 scripts/bundle.py
+```
+
+This writes `tests.json`, a flat list of all cases in manifest order. Each case gets a `domain` field (taken from the manifest) right after `id`. The script fails if a case's `id` differs from its manifest entry, if `test_count` is wrong, or if the manifest and the files on disk disagree.
+
+`tests.json` is generated and listed in `.gitignore`; regenerate it rather than editing it.
 
 ### Components
 
